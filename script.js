@@ -1,24 +1,32 @@
 // Code Derived From : https://stackoverflow.com/questions/6787374/how-to-display-system-time
 
-window.addEventListener("DOMContentLoaded", () => {
-  let timer = document.querySelector("footer-clock");
-  let currentTime = new Date();
-  let hours = currentTime.getHours();
-  let minutes = currentTime.getMinutes();
-
-  updateTime();
+document.addEventListener("DOMContentLoaded", () => {
+  let timer = document.querySelector(".footer-clock");
+  let oldTime;
 
   function updateTime() {
-    if (minutes < 10) {
-      minutes = "0" + minutes;
+    let currentTime = new Date();
+    let minutes = currentTime.getMinutes();
+
+    if (!oldTime || minutes > oldTime || minutes === 0) {
+      let hours = currentTime.getHours();
+
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+
+      let writeup = (hours > 12 ? hours - 12 : hours) + ":" + minutes + " ";
+
+      if (hours > 11) {
+        writeup += "am";
+      } else {
+        writeup += "pm";
+      }
+
+      oldTime = currentTime.getMinutes();
+      timer.innerHTML = writeup;
     }
-    let writeup = hours + ":" + minutes + " ";
-    if (hours > 11) {
-      writeup += "am";
-    } else {
-      writeup += "pm";
-    }
-    setTimeout("updateTime()", 59000);
-    timer.innerHTML = writeup;
+    setTimeout(updateTime, 2000);
   }
+  updateTime();
 });
