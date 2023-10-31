@@ -5,13 +5,92 @@
 }
 
 :root {
+  font-size: 20px;
+  --title-font-size: 2rem;
+  --body-font-size: 1rem;
+  --modal-font-size: 1.5rem;
+
+  --mint-color: #d8ffe7;
+  --aqua-color: #43c4ab;
+  --pink-color: #f997b9;
+  --orange-color: #daa67e;
+
+  --main-border: solid 0.1rem black;
+  --main-border-radius: 0.4rem;
   /* overflow: hidden; */
 }
+html {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top right,
+    var(--orange-color),
+    var(--pink-color)
+  );
+}
 body {
+  width: 100%;
+  height: 100%;
   font-family: "Itim", cursive;
-  /* font-family: "Lexend", sans-serif; */
+  /* font-family: "Lexend", sans-serif;  */
+}
+body::before {
+  content: "";
+  background-image: url(./images/watermelonseedbg.png);
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+  z-index: -1;
 }
 
-h1 {
-  font-family: "Lexend", sans-serif;
+.title {
+  font-size: var(--title-font-size);
+}
+
+/* Footer Stylings */
+.footer {
+  height: 3rem;
+  width: 100%;
+  background: linear-gradient(to right, var(--aqua-color), var(--mint-color));
+
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+  border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-start,
+.footer-clock {
+  border: var(--main-border);
+  padding: 0.2rem 1rem;
+}
+
+.footer-start {
+  background: linear-gradient(
+    to top right,
+    var(--pink-color),
+    var(--orange-color)
+  );
+  border-radius: var(--main-border-radius) var(--main-border-radius)
+    var(--main-border-radius) 0;
+}
+
+.footer-clock {
+  background: linear-gradient(
+    to bottom left,
+    var(--pink-color),
+    var(--orange-color)
+  );
+  border-radius: var(--main-border-radius) var(--main-border-radius) 0
+    var(--main-border-radius);
 }
