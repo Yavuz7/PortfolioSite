@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* overflow: hidden; */
+}
+body {
+  font-family: "Itim", cursive;
+  /* font-family: "Lexend", sans-serif; */
+}
+
+h1 {
+  font-family: "Lexend", sans-serif;
+}
