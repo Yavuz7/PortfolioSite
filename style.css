@@ -128,9 +128,20 @@ body {
 h3 {
   font-size: var(--body-font-size);
 }
+button {
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 100%;
+}
 /* Desktop */
 
 .desktop {
+  gap: 1rem;
+  justify-items: center;
   padding: 2.5rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -156,18 +167,10 @@ h3 {
 }
 
 .desktop-icon {
+  line-height: 1.15;
   height: fit-content;
   padding: 0.3rem;
   border-radius: var(--main-border-radius);
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  background: transparent;
-  border: none;
-  /* -webkit-appearance: button; */
   max-width: fit-content;
 }
 .desktop-icon:hover {
@@ -175,10 +178,73 @@ h3 {
 }
 .desktop-icon-title {
   line-height: 1.25;
-  max-width: 10ch;
+  max-width: 11ch;
   text-align: center;
 }
+/* Modal */
 
+.modal {
+  display: flex;
+  flex-direction: column;
+  border: var(--main-border);
+  border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+  background-color: var(--aqua-color);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: fixed;
+  width: clamp(18rem, 80%, 65rem);
+  height: clamp(20rem, 80%, 35rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.086);
+}
+.modal-title {
+  z-index: 4;
+  position: relative;
+  user-select: none;
+  display: flex;
+  padding: 0 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background: linear-gradient(to right, #ee9da6, var(--pink-color));
+}
+.modal-title-text {
+  font-size: var(--modal-font-size);
+}
+.modal-title-button {
+  display: flex;
+  border-radius: var(--main-border-radius);
+  width: max-content;
+  height: min-content;
+  padding: 0 0.15rem;
+}
+.modal-title-button-cross {
+  align-self: center;
+}
+.modal-title-button:hover {
+  background-color: rgba(255, 255, 255, 0.119);
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* flex: 1; */
+  height: 100%;
+  z-index: 4;
+  position: relative;
+}
+.modal-media {
+  text-align: center;
+  width: 100%;
+}
+.modal-banner {
+  text-align: center;
+  background-color: var(--mint-color);
+  width: 95%;
+}
 /* Footer Stylings */
 .footer {
   height: 3rem;

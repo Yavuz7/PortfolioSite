@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
       let writeup = (hours > 12 ? hours - 12 : hours) + ":" + minutes + " ";
 
       if (hours > 11) {
-        writeup += "am";
-      } else {
         writeup += "pm";
+      } else {
+        writeup += "am";
       }
 
       oldTime = currentTime.getMinutes();
