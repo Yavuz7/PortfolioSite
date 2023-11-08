@@ -29,4 +29,30 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(updateTime, 2000);
   }
   updateTime();
+
+  let modal = document.querySelector(".modal");
+  let closeButton = document.querySelector(".modal-title-button");
+  let icons = document.querySelectorAll(".desktop-icon");
+
+  closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  icons.forEach((icon) => {
+    icon.addEventListener("dblclick", populateModal);
+  });
+
+  function populateModal(evt) {
+    modal.style.display = "block";
+    console.log(evt.currentTarget);
+    // Get Classes Of Current Target
+    //Check Which class Matches the key in the Data Array
+    // Set Data of Modal To Those Classes
+  }
 });
