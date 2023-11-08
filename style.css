@@ -295,6 +295,10 @@ button {
     var(--main-border-radius) 0;
 }
 
+.footer-boring-info {
+  align-self: flex-end;
+  padding-bottom: 0.2rem;
+}
 .footer-clock {
   background: linear-gradient(
     to bottom left,
