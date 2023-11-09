@@ -49,10 +49,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function populateModal(evt) {
-    modal.style.display = "block";
-    console.log(evt.currentTarget);
     // Get Classes Of Current Target
+    classes = evt.currentTarget.classList;
+    classes.forEach((className) => {
+      if (modalInfo.find(className)) {
+        console.log("Found");
+      }
+    });
     //Check Which class Matches the key in the Data Array
+
+    //Check If Link Should Open a new tab and then do that
     // Set Data of Modal To Those Classes
+
+    //Display The Final Modal
+    modal.style.display = "block";
   }
+
+  const modalInfo = [
+    {
+      id: "linkedin",
+      isLink: "true",
+      linkUrl: "https://www.linkedin.com/in/yavuz-yurtseven-399256213/",
+    },
+    {
+      id: "github",
+      isLink: "true",
+      linkUrl: "https://github.com/Yavuz7",
+    },
+    {
+      id: "aboutSite",
+      isLink: "true",
+      linkUrl: "https://github.com/Yavuz7/PortfolioSite/blob/main/README.md",
+    },
+  ];
 });
