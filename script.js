@@ -66,10 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (data.isLink == "true") {
           window.open(data["linkUrl"]);
         } else {
-          // let modalTitle = document.querySelector(".modal-title-text");
-          // let modalMedia = document.querySelector(".modal-media");
-          // let modalText = document.querySelector(".modal-banner-text");
-          // let modalButton = document.querySelector(".modal-banner-button");
+          // Populate Modal With Information
           modalTitle.textContent = data["title"];
           modalMedia.textContent = data["media"];
           modalText.textContent = data["text"];
@@ -79,14 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
-    //Check Which class Matches the key in the Data Array
-
-    //Check If Link Should Open a new tab and then do that
-    // Set Data of Modal To Those Classes
-
-    //Display The Final Modal
   }
-
+  // Information For Modal To Grab
+  // If isLink is true, a linkUrl needs to be provided to link to
+  // Otherwise Populate the Object with the information needed for the modal
   const modalInfo = [
     {
       id: "linkedin",

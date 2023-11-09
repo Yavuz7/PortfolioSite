@@ -105,10 +105,11 @@ video {
   --orange-color: #daa67e;
 
   --main-border: solid 0.1rem black;
-  --main-border-radius: 0.4rem;
+  --main-border-radius: 0.2rem;
   /* overflow: hidden; */
 }
 html {
+  outline: var(--main-border);
   width: 100%;
   height: 100%;
   background-image: url(./images/watermelonbg2.png);
@@ -202,7 +203,7 @@ button {
   display: flex;
   flex-direction: column;
   border: var(--main-border);
-  border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+  border-radius: var(--main-border-radius);
   background-color: var(--aqua-color);
   left: 0;
   right: 0;
