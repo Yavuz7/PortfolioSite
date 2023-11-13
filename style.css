@@ -112,7 +112,7 @@ html {
   outline: var(--main-border);
   width: 100%;
   height: 100%;
-  background-image: url(./images/watermelonbg2.png);
+  background-image: url(./images/watermelonseedbgnogradient.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -120,7 +120,29 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Itim", cursive;
+
+  background: linear-gradient(
+    45deg,
+    #f58b3aad,
+    #daa67ead,
+    #f997b97d,
+    #ff468764
+  );
+  animation: gradient 45s ease infinite;
+  background-size: 400% 400%;
   /* font-family: "Lexend", sans-serif;  */
+}
+/* Animated BG derived from:https://codepen.io/P1N2O/pen/pyBNzX  */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .title {
@@ -287,7 +309,9 @@ button {
   z-index: 2;
   height: 3rem;
   width: 100%;
-  background: linear-gradient(to right, var(--aqua-color), var(--mint-color));
+  background: linear-gradient(-90deg, var(--aqua-color), var(--mint-color));
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
 
   border-top: var(--main-border);
   border-bottom: var(--main-border);
@@ -309,10 +333,14 @@ button {
 
 .footer-start {
   background: linear-gradient(
-    to top right,
+    -45deg,
+    #f9842b,
     var(--pink-color),
-    var(--orange-color)
+    var(--orange-color),
+    #ff3c80
   );
+  animation: gradient 6s ease infinite;
+  background-size: 400% 400%;
   border-radius: var(--main-border-radius) var(--main-border-radius)
     var(--main-border-radius) 0;
 }
@@ -323,10 +351,14 @@ button {
 }
 .footer-clock {
   background: linear-gradient(
-    to bottom left,
+    45deg,
+    #f9842b,
     var(--pink-color),
-    var(--orange-color)
+    var(--orange-color),
+    #ff3c80
   );
+  animation: gradient 6s ease infinite;
+  background-size: 400% 400%;
   border-radius: var(--main-border-radius) var(--main-border-radius) 0
     var(--main-border-radius);
 }
