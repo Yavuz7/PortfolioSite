@@ -254,12 +254,33 @@ button {
 }
 .modal-media {
   text-align: center;
+  align-self: center;
   width: 100%;
 }
 .modal-banner {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
   background-color: var(--mint-color);
   width: 95%;
+}
+.modal-banner-text {
+  max-width: 85%;
+}
+.spacer {
+  content: "";
+  /* border-bottom: #43c4ab 0.1rem solid; */
+}
+.modal-banner-button-link {
+  justify-self: end;
+}
+.modal-banner-button {
+  border: #ee9da6 0.1rem solid;
+  background: var(--pink-color);
+  padding: 1rem 2.2rem;
+  border-radius: 3rem;
 }
 /* Footer Stylings */
 .footer {
