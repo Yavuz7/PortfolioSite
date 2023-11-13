@@ -255,6 +255,8 @@ button {
   width: 100%;
   height: 3rem;
   background: linear-gradient(to top left, #ee9da6, var(--pink-color), #ff7484);
+  animation: gradient 3s ease infinite;
+  background-size: 400% 400%;
   border-bottom: var(--main-border);
 }
 .modal-title-text {
@@ -275,6 +277,7 @@ button {
 }
 
 .modal-body {
+  font-size: var(--body-font-size);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* flex: 1; */
@@ -297,20 +300,27 @@ button {
   width: 95%;
 }
 .modal-banner-text {
-  max-width: 85%;
-}
-.spacer {
-  content: "";
-  /* border-bottom: #43c4ab 0.1rem solid; */
+  font-family: "Lexend", sans-serif;
+  text-align: left;
+  max-width: 70%;
+  border-top: #17b998 0.09rem solid;
+  border-bottom: #17b998 0.09rem solid;
+  padding: 2.5rem 0;
 }
 .modal-banner-button-link {
   justify-self: end;
 }
 .modal-banner-button {
-  border: #ee9da6 0.1rem solid;
-  background: var(--pink-color);
-  padding: 1rem 2.2rem;
+  border: #ff4258 0.1rem solid;
+  background: linear-gradient(45deg, var(--pink-color), #ef5567);
+  /* background: var(--pink-color); */
+  padding: 0.5rem 3rem;
   border-radius: 3rem;
+}
+.modal-banner-button:hover {
+  background: linear-gradient(45deg, #ffa3ae, var(--pink-color), #ff334b);
+  animation: gradient 2.5s ease infinite;
+  background-size: 400% 400%;
 }
 /* Footer Stylings */
 .footer {
@@ -337,6 +347,7 @@ button {
 .footer-clock {
   border: var(--main-border);
   padding: 0.2rem 1rem;
+  user-select: none;
 }
 
 .footer-start {
