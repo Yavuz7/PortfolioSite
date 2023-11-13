@@ -128,7 +128,7 @@ body {
     #f997b97d,
     #ff468764
   );
-  animation: gradient 45s ease infinite;
+  animation: gradient 60s ease infinite;
   background-size: 400% 400%;
   /* font-family: "Lexend", sans-serif;  */
 }
@@ -195,11 +195,18 @@ button {
   padding: 0.3rem;
   border-radius: var(--main-border-radius);
   max-width: fit-content;
+  transition: background 0.2s;
 }
 .desktop-icon:hover,
 .desktop-icon:active,
 .desktop-icon:focus {
-  background: rgba(215, 215, 215, 0.438);
+  background: linear-gradient(
+    90deg,
+    rgba(215, 215, 215, 0.089),
+    rgba(255, 255, 255, 0.438)
+  );
+  animation: gradient 2s ease infinite;
+  background-size: 400% 400%;
 }
 .desktop-icon-title {
   line-height: 1.25;
@@ -211,7 +218,7 @@ button {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   top: 0;
   width: 100%;
@@ -247,7 +254,8 @@ button {
   align-items: center;
   width: 100%;
   height: 3rem;
-  background: linear-gradient(to right, #ee9da6, var(--pink-color));
+  background: linear-gradient(to top left, #ee9da6, var(--pink-color), #ff7484);
+  border-bottom: var(--main-border);
 }
 .modal-title-text {
   font-size: var(--modal-font-size);
@@ -306,7 +314,7 @@ button {
 }
 /* Footer Stylings */
 .footer {
-  z-index: 2;
+  z-index: 1;
   height: 3rem;
   width: 100%;
   background: linear-gradient(-90deg, var(--aqua-color), var(--mint-color));
@@ -346,6 +354,7 @@ button {
 }
 
 .footer-boring-info {
+  display: none;
   align-self: flex-end;
   padding-bottom: 0.2rem;
 }
