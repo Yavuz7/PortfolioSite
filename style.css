@@ -112,7 +112,7 @@ html {
   outline: var(--main-border);
   width: 100%;
   height: 100%;
-  background-image: url(./images/watermelonseedbgnogradient.png);
+  background-image: url(./images/watermelonbg.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
