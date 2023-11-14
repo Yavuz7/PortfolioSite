@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Modal Info
   let modalTitle = document.querySelector(".modal-title-text");
-  let modalMedia = document.querySelector(".modal-media");
+  let modalImage1 = document.querySelector(".modal-media-image1");
+  let modalImage2 = document.querySelector(".modal-media-image2");
   let modalText = document.querySelector(".modal-banner-text");
   let modalButton = document.querySelector(".modal-banner-button");
   let modalButtonLink = document.querySelector(".modal-banner-button-link");
@@ -68,7 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           // Populate Modal With Information
           modalTitle.textContent = data["title"];
-          modalMedia.innerHTML = data["media"];
+          modalImage1.src = data["image1"];
+          modalImage2.src = data["image2"];
           modalText.innerHTML = data["text"];
           modalButton.textContent = data["button"];
           modalButtonLink.href = data["buttonUrl"];
@@ -100,7 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "ufcFightSim",
       isLink: "false",
       title: "UFC Fight Simulator Project",
-      media: "Display Video Here",
+      image1: "./images/screenshot3.webp",
+      image2: "./images/screenshot4.webp",
       text: "This is a group project I did in the senior year of my class! <br/> <br/>We coded together a website that let user's login, create and save fighter loadouts, and play a turn based combat fighting game!<br/><br/> This project is a website that our team created using Rabbitmq, Apache, Html, PHP, JS, and Nodejs.",
       button: "Github",
       buttonUrl: "https://github.com/Yavuz7/UFCFightSim",
@@ -109,7 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "aspireHigh",
       isLink: "false",
       title: "Aspire High Youth Development Internship",
-      media: "Display Video Here",
+      image1: "./images/screenshot8.webp",
+      image2: "./images/screenshot7.webp",
       text: "This is the internship I'm currently working! <br/><br/> I have been working under a senior developer to improve my coding and design skills.<br/> (He's are a cool dude.)<br/><br/> The website was coded with plain Javascript, HTML, and CSS. <br/><br/> Website isn't up as of 11/13/23 ",
       button: "Website",
       buttonUrl: "https://aspirehighyouth.org/",
@@ -118,7 +122,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "dotr",
       isLink: "false",
       title: "Yugioh DOTR Remake (Demo)",
-      media: "Display Video Here",
+      image1: "./images/screenshot1.webp",
+      image2: "./images/screenshot2.webp",
       text: "This is a group project I did for my 3D Game Development class! <br/><br/> I made it based off a old favorite game of mine, Yugioh Duelist Of The Roses!<br/><br/> The graphics aren't quite there, but it was quite intensive on the coding side. <br/><br/> Coded in C, and card data is retrieved JSON!",
       button: "Github",
       buttonUrl: "https://github.com/Yavuz7/VulkanProjectGF3D",
@@ -127,8 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "quake2",
       isLink: "false",
       title: "Quake 2 Boss Mod",
-      media:
-        "The Mod Has Since Broke <br/>and I have no way to get pictures, <br/>sorry...",
+      image1: "./images/screenshot5.webp",
+      image2: "./images/screenshot6.webp",
       text: "This is a project I did for my game mod class, based around being hunted down around the map by a scary boss!<br/><br/>As the Quake 2 source code was coded in C, so too was this mod!",
       button: "Github",
       buttonUrl: "https://github.com/Yavuz7/Quake2BossMod",

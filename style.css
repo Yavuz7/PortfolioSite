@@ -290,6 +290,16 @@ button {
   align-self: center;
   width: 100%;
 }
+.modal-media-image1,
+.modal-media-image2 {
+  border: #14a185 dotted 0.3rem;
+  border-radius: 1rem;
+  max-width: 80%;
+  padding: 0.25rem;
+}
+.modal-media-image2 {
+  margin-top: 1rem;
+}
 .modal-banner {
   display: flex;
   justify-content: space-evenly;
@@ -303,8 +313,8 @@ button {
   font-family: "Lexend", sans-serif;
   text-align: left;
   max-width: 70%;
-  border-top: #17b998 0.09rem solid;
-  border-bottom: #17b998 0.09rem solid;
+  border-top: #17b998 0.3rem dotted;
+  border-bottom: #17b998 0.3rem dotted;
   padding: 2.5rem 0;
 }
 .modal-banner-button-link {
