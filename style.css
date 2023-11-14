@@ -106,7 +106,7 @@ video {
 
   --main-border: solid 0.1rem black;
   --main-border-radius: 0.2rem;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 html {
   outline: var(--main-border);
@@ -167,7 +167,7 @@ button {
   justify-items: center;
   padding: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fit, min(30%, 1fr));
 }
 /* Links */
 /* .linkedin {
@@ -283,6 +283,7 @@ button {
 .modal-body {
   font-size: var(--body-font-size);
   display: grid;
+  overflow-y: scroll;
   grid-template-columns: repeat(2, 1fr);
   /* flex: 1; */
   height: 100%;
@@ -318,10 +319,12 @@ button {
   text-align: left;
   max-width: 70%;
   border-top: #17b998 0.3rem dotted;
+  margin-top: 1rem;
   border-bottom: #17b998 0.3rem dotted;
-  padding: 2.5rem 0;
+  padding: 2rem 0;
 }
 .modal-banner-button-link {
+  margin: 1rem 0;
   justify-self: end;
 }
 .modal-banner-button {
@@ -399,4 +402,98 @@ button {
   background-size: 400% 400%;
   border-radius: var(--main-border-radius) var(--main-border-radius) 0
     var(--main-border-radius);
+}
+
+@media (max-width: 825px) {
+  .desktop {
+    display: grid;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    padding: 0.25rem;
+  }
+  .desktop-icon-image {
+    max-width: 4rem;
+  }
+  .desktop-icon-title {
+    font-size: 1rem;
+  }
+  .aboutSite {
+    grid-row-start: 1;
+  }
+  .ufcFightSim {
+    grid-column-start: 1;
+  }
+  .dotr {
+    grid-row-start: 2;
+    grid-column-start: 3;
+  }
+  .quake2 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
+
+  .modal-main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .modal-title-text {
+    font-size: 1.25rem;
+  }
+  .modal-body {
+    font-size: var(--body-font-size);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 100%;
+    z-index: 4;
+    position: relative;
+  }
+  .modal-media {
+    padding: 1.5rem 0;
+  }
+  .modal-banner {
+    width: 100%;
+  }
+  .footer-clock {
+    display: none;
+  }
+  .footer-start {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 300px) {
+  .desktop {
+    display: grid;
+    /* justify-content: space-around; */
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 0.25rem;
+  }
+  .desktop-icon-image {
+    max-width: 2rem;
+  }
+  .modal-title {
+    height: 5rem;
+  }
+  .modal-title-text {
+    font-size: 1rem;
+  }
+  .aboutSite {
+    grid-row-start: 1;
+  }
+  .ufcFightSim {
+    grid-column-start: 1;
+  }
+  .dotr {
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+  .quake2 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
 }
