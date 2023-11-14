@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Quake 2 Boss Mod",
       image1: "./images/screenshot5.webp",
       image2: "./images/screenshot6.webp",
-      text: "This is a project I did for my game mod class, based around being hunted down around the map by a scary boss!<br/><br/>As the Quake 2 source code was coded in C, so too was this mod!",
+      text: "This is a project I did for my game mod class, based around being hunted around the map by a boss!<br/><br/> I really enjoyed making this mod as I got the oppurtunity to make the boss do some wacky things.<br/><br/>As the Quake 2 source code was coded in C, so too was this mod!",
       button: "Github",
       buttonUrl: "https://github.com/Yavuz7/Quake2BossMod",
     },
