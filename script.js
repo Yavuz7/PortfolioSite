@@ -51,37 +51,37 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.style.display = "none";
     }
   });
-
-  //Single Click Responsive Solution Derived From : https://stackoverflow.com/questions/64830015/do-something-only-once-if-screen-width-is-less-than-px
-  if (window.matchMedia("(max-width: 825px)").matches) {
-    icons.forEach((icon) => {
-      icon.addEventListener("click", modalHandler);
-    });
-    icons.forEach((icon) => {
-      icon.removeEventListener("dblclick", modalHandler);
-    });
-  } else {
-    icons.forEach((icon) => {
-      icon.addEventListener("dblclick", modalHandler);
-    });
-  }
-  window.addEventListener("resize", () => {
-    if (window.matchMedia("(max-width: 825px)").matches) {
-      icons.forEach((icon) => {
-        icon.addEventListener("click", modalHandler);
-      });
-      icons.forEach((icon) => {
-        icon.removeEventListener("dblclick", modalHandler);
-      });
-    } else {
-      icons.forEach((icon) => {
-        icon.addEventListener("dblclick", modalHandler);
-      });
-      icons.forEach((icon) => {
-        icon.removeEventListener("click", modalHandler);
-      });
-    }
+  icons.forEach((icon) => {
+    icon.addEventListener("click", modalHandler);
   });
+  //Single Click Responsive Solution Derived From : https://stackoverflow.com/questions/64830015/do-something-only-once-if-screen-width-is-less-than-px
+  // if (window.matchMedia("(max-width: 825px)").matches) {
+
+  //   icons.forEach((icon) => {
+  //     icon.removeEventListener("dblclick", modalHandler);
+  //   });
+  // } else {
+  //   icons.forEach((icon) => {
+  //     icon.addEventListener("dblclick", modalHandler);
+  //   });
+  // }
+  // window.addEventListener("resize", () => {
+  //   if (window.matchMedia("(max-width: 825px)").matches) {
+  //     icons.forEach((icon) => {
+  //       icon.addEventListener("click", modalHandler);
+  //     });
+  //     icons.forEach((icon) => {
+  //       icon.removeEventListener("dblclick", modalHandler);
+  //     });
+  //   } else {
+  //     icons.forEach((icon) => {
+  //       icon.addEventListener("dblclick", modalHandler);
+  //     });
+  //     icons.forEach((icon) => {
+  //       icon.removeEventListener("click", modalHandler);
+  //     });
+  //   }
+  // });
 
   function modalHandler(evt) {
     // Get Classes Of Current Target
