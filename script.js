@@ -54,34 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
   icons.forEach((icon) => {
     icon.addEventListener("click", modalHandler);
   });
-  //Single Click Responsive Solution Derived From : https://stackoverflow.com/questions/64830015/do-something-only-once-if-screen-width-is-less-than-px
-  // if (window.matchMedia("(max-width: 825px)").matches) {
-
-  //   icons.forEach((icon) => {
-  //     icon.removeEventListener("dblclick", modalHandler);
-  //   });
-  // } else {
-  //   icons.forEach((icon) => {
-  //     icon.addEventListener("dblclick", modalHandler);
-  //   });
-  // }
-  // window.addEventListener("resize", () => {
-  //   if (window.matchMedia("(max-width: 825px)").matches) {
-  //     icons.forEach((icon) => {
-  //       icon.addEventListener("click", modalHandler);
-  //     });
-  //     icons.forEach((icon) => {
-  //       icon.removeEventListener("dblclick", modalHandler);
-  //     });
-  //   } else {
-  //     icons.forEach((icon) => {
-  //       icon.addEventListener("dblclick", modalHandler);
-  //     });
-  //     icons.forEach((icon) => {
-  //       icon.removeEventListener("click", modalHandler);
-  //     });
-  //   }
-  // });
 
   function modalHandler(evt) {
     // Get Classes Of Current Target
@@ -141,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Aspire High Youth Development Internship",
       image1: "./images/screenshot8.webp",
       image2: "./images/screenshot7.webp",
-      text: "This is the internship I'm currently working! <br/><br/> I have been working under a senior developer to improve my coding and design skills.<br/> (He's are a cool dude)<br/><br/> The website was coded with plain Javascript, HTML, and CSS. <br/><br/> Website isn't up as of 11/13/23 ",
+      text: "This is the internship I'm currently working! <br/><br/> I have been working under a senior developer to improve my coding and design skills.<br/> (He's are a cool dude)<br/><br/> The website was coded with plain Javascript, HTML, and CSS.",
       button: "Website",
       buttonUrl: "https://aspirehighyouth.org/",
     },
