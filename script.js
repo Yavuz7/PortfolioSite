@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Aspire High Youth Development Internship",
       image1: "./images/screenshot8.webp",
       image2: "./images/screenshot7.webp",
-      text: "This is the internship I'm currently working! <br/><br/> I have been working under a senior developer to improve my coding and design skills.<br/> (He's are a cool dude)<br/><br/> The website was coded with plain Javascript, HTML, and CSS.",
+      text: "This is the internship I'm currently working! <br/><br/> I have been working under a senior developer to improve my coding and design skills.<br/> (He's a cool dude)<br/><br/> The website was coded with plain Javascript, HTML, and CSS.",
       button: "Website",
       buttonUrl: "https://aspirehighyouth.org/",
     },
