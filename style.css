@@ -172,6 +172,7 @@ button {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  transition: opacity 1s;
 }
 .lock-screen-username {
   font-size: var(--modal-font-size);
@@ -180,8 +181,9 @@ button {
 .lock-screen-img {
   border: #14a185 dotted 0.3rem;
   border-radius: 1rem;
-  max-width: 80%;
-  padding: 0.25rem;
+  padding: 0.4rem;
+  max-width: fit-content;
+  align-self: center;
 }
 .lock-screen-button {
   font-weight: bold;

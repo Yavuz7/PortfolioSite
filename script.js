@@ -42,6 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let modalButton = document.querySelector(".modal-banner-button");
   let modalButtonLink = document.querySelector(".modal-banner-button-link");
 
+  let lockscreen = document.querySelector(".lock-screen");
+  let lockscreenButton = document.querySelector(".lock-screen-button");
+
+  lockscreenButton.addEventListener("click", () => {
+    lockscreen.style.opacity = 0;
+    setTimeout(function () {
+      lockscreen.style.display = "none";
+    }, 1000);
+  });
+
   closeButton.addEventListener("click", () => {
     modal.style.display = "none";
   });
