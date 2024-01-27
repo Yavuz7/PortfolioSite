@@ -99,22 +99,18 @@ video {
   --body-font-size: 1.2rem;
   --modal-font-size: 1.5rem;
 
-  --mint-color: #d8ffe7;
-  --aqua-color: #43c4ab;
-  --pink-color: #f997b9;
-  --orange-color: #daa67e;
-
   --main-border: solid 0.1rem black;
-  --main-border-radius: 0.2rem;
-  overflow: hidden;
+  --main-border-radius: 2.2rem;
+  /* overflow: hidden; */
 }
 html {
   outline: var(--main-border);
   width: 100%;
   height: 100%;
-  background-image: url(./images/watermelonbg.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
+  animation: animatedBackground 45s linear infinite alternate;
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  background: url(./images/bg2.webp);
 }
 body {
   width: 100%;
@@ -123,14 +119,21 @@ body {
 
   background: linear-gradient(
     45deg,
-    #f58b3aad,
-    #daa67ead,
-    #f997b97d,
-    #ff468764
+    #ec3effad,
+    #da7e7e61,
+    #b397f97d,
+    #fd2e2e6e
   );
-  animation: gradient 60s ease infinite;
-  background-size: 400% 400%;
   /* font-family: "Lexend", sans-serif;  */
+}
+/* Animated BG From : https://stackoverflow.com/questions/40269514/animate-a-div-background-image */
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
 }
 /* Animated BG derived from:https://codepen.io/P1N2O/pen/pyBNzX  */
 @keyframes gradient {
@@ -160,76 +163,103 @@ button {
   font-family: inherit;
   font-size: 100%;
 }
-/* Lock Screen */
-.lock-screen {
-  z-index: 10;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(0deg, var(--aqua-color), var(--mint-color));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  transition: opacity 1s;
-}
-.lock-screen-username {
-  font-size: var(--modal-font-size);
-  padding: 1.5rem 0;
-}
-.lock-screen-img {
-  border: #14a185 dotted 0.3rem;
-  border-radius: 1rem;
-  padding: 0.4rem;
-  max-width: fit-content;
-  align-self: center;
-}
-.lock-screen-button {
-  font-weight: bold;
-  font-size: var(--body-font-size);
-  border: #ff4258 0.05rem solid;
-  background: var(--pink-color);
-  padding: 0.5rem 3rem;
-  border-radius: 3rem;
-  transition: 0.2s background;
+
+/* Main Sectors */
+.main-container {
+  height: 100vh;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.lock-screen-button:hover {
-  cursor: pointer;
-  background: white;
+.main-display {
+  position: relative;
+  background-color: #d3ffed;
+  grid-row: span 2;
+  grid-column: span 1;
+  margin: 2rem 1.25rem 0rem;
+  height: 80%;
+  border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
+  /* border: var(--main-border); */
 }
-/* Desktop */
-main {
-  height: 92%;
+.main-display-content {
+  width: 100%;
+  height: calc(100% - 60px);
+  border: var(--main-border);
 }
+
+.main-display h1 {
+  background-color: white;
+  border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
+  border: var(--main-border);
+  border-bottom: 0;
+  height: 60px;
+  text-align: center;
+  font-size: var(--title-font-size);
+}
+
+.main-display-footer {
+  background-color: white;
+  border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+  border: var(--main-border);
+  border-top: 0;
+  height: 60px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.desktop-wrapper {
+  position: relative;
+  background-color: #ffffe7;
+  border-radius: var(--main-border-radius);
+  margin: 2rem 3rem 1rem;
+  /* border: var(--main-border); */
+}
+
+.desktop-wrapper h1 {
+  background-color: white;
+  border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
+  height: 60px;
+  text-align: center;
+  font-size: var(--title-font-size);
+  border: var(--main-border);
+  border-bottom: 0;
+}
+
 .desktop {
+  border: var(--main-border);
+  padding: 4rem 2rem;
+  grid-column-start: 2;
   gap: 0.1rem;
-  height: 100%;
   justify-items: center;
-  padding: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, min(30%, 1fr));
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
-/* Links */
-/* .linkedin {
+
+.desktop-footer {
+  position: relative;
+  border: var(--main-border);
+  border-top: 0;
+  background-color: white;
+  border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
 }
-.github {
-} */
-.aboutSite {
-  grid-row-start: 2;
+
+.directory {
+  background-color: #e7dbef;
+  border-radius: var(--main-border-radius);
+  margin: 3rem;
 }
-.ufcFightSim {
-  grid-column-start: 9;
-}
-.dotr {
-  grid-row-start: 2;
-  grid-column-start: 10;
-}
-.quake2 {
-  grid-row-start: 3;
-  grid-column-start: 10;
+
+.directory-list a li {
+  display: inline;
 }
 
 .desktop-icon {
