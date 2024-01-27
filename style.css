@@ -179,8 +179,7 @@ button {
   background-color: #d3ffed;
   grid-row: span 2;
   grid-column: span 1;
-  margin: 2rem 1.25rem 0rem;
-  height: 80%;
+  margin: 2rem 1.25rem 4rem;
   border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
   /* border: var(--main-border); */
 }
@@ -231,9 +230,9 @@ button {
 
 .desktop {
   border: var(--main-border);
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   grid-column-start: 2;
-  gap: 0.1rem;
+  gap: 1rem;
   justify-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -254,12 +253,50 @@ button {
 
 .directory {
   background-color: #e7dbef;
-  border-radius: var(--main-border-radius);
-  margin: 3rem;
+  border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
+  margin: 3rem 3rem;
+}
+
+.directory h1 {
+  background-color: white;
+  border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  border: var(--main-border);
+  border-bottom: 0;
+}
+
+.directory-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  width: 100%;
+  height: calc(100% - 40px);
+  border: var(--main-border);
+}
+.directory-list a {
+  text-decoration: none;
 }
 
 .directory-list a li {
   display: inline;
+}
+
+.directory-footer {
+  position: relative;
+  border: var(--main-border);
+  border-top: 0;
+  background-color: white;
+  border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
 }
 
 .desktop-icon {
