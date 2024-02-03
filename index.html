@@ -47,10 +47,8 @@
     <div class="main-container">
       <div class="main-display">
         <h1>My Portfolio</h1>
-        <div class="main-display-content"></div>
-        <div class="main-display-footer"></div>
       </div>
-      <div class="desktop-wrapper">
+      <div class="desktop-display">
         <h1>My Websites</h1>
         <div class="desktop">
           <button class="desktop-icon linkedin">
@@ -85,7 +83,29 @@
             />
             <h3 class="desktop-icon-title">UFC Fight<br />Simulator</h3>
           </button>
-          <!-- <button class="desktop-icon aspireHigh">
+        </div>
+      </div>
+      <div class="directory">
+        <h1>Directory</h1>
+        <ul class="directory-list">
+          <a href="#"><li>About Me</li></a>
+          <a href="#"><li>Web Design Projects</li></a>
+          <a href="#"><li>Graphic Design Projects</li></a>
+          <a href="#"><li>Game Projects</li></a>
+          <a href="#"><li>More Game Projects</li></a>
+        </ul>
+        <!-- <div class="directory-footer"></div> -->
+      </div>
+    </div>
+    <div class="footer-boring-info">
+      &copy; Yavuz Yurtseven 2023 &emsp;
+      <a href="https://icons8.com"> Icons By Icons8</a>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
+
+<!-- <button class="desktop-icon aspireHigh">
           <img
             class="desktop-icon-image"
             src="data:image/png;base64,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"
@@ -111,25 +131,3 @@
           />
           <h3 class="desktop-icon-title">Quake 2 <br />Boss Mod</h3>
         </button> -->
-        </div>
-        <div class="desktop-footer"></div>
-      </div>
-      <div class="directory">
-        <h1>Directory</h1>
-        <ul class="directory-list">
-          <a href="#"><li>About Me</li></a>
-          <a href="#"><li>Web Design Projects</li></a>
-          <a href="#"><li>Graphic Design Projects</li></a>
-          <a href="#"><li>Game Projects</li></a>
-          <a href="#"><li>More Game Projects</li></a>
-        </ul>
-        <div class="directory-footer"></div>
-      </div>
-    </div>
-    <div class="footer-boring-info">
-      &copy; Yavuz Yurtseven 2023 &emsp;
-      <a href="https://icons8.com"> Icons By Icons8</a>
-    </div>
-  </body>
-  <script src="script.js"></script>
-</html>
